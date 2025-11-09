@@ -12,12 +12,10 @@ Estimate the unknown parameters **θ**, **M**, and **X** in the given parametric
 
 ## 🔹 Given Model Equations
 
-\[
-\begin{cases}
-x(t) = t \cos(\theta) - e^{M|t|}\sin(0.3t)\sin(\theta) + X \\
-y(t) = 42 + t \sin(\theta) + e^{M|t|}\sin(0.3t)\cos(\theta)
-\end{cases}
-\]
+
+x(t) = t*cos(theta) - exp(M*abs(t))*sin(0.3*t)*sin(theta) + X
+
+y(t) = 42 + t*sin(theta) + exp(M*abs(t))*sin(0.3*t)*cos(theta)
 
 Where:
 - \( t \) — parameter uniformly sampled between 6 and 60  
@@ -36,9 +34,9 @@ Where:
    Created `model_xy()` to generate predicted \(x, y\) values for given \(t, \theta, M, X\).
 
 3. **Loss Function (L1):**
-   \[
-   L_1 = \sum_i (|x_i - x_{\text{pred},i}| + |y_i - y_{\text{pred},i}|)
-   \]
+
+   L1 = Σ ( |x_i - x_pred,i| + |y_i - y_pred,i| )
+
    Used because it is robust to outliers.
 
 4. **Initialization (Grid Search):**  
@@ -85,5 +83,5 @@ In **LaTeX format:**
 ---
 
 ## 🔹 Desmos Format (for submission)
-Copy this directly into [Desmos Graphing Calculator](https://www.desmos.com/calculator):
+Copy this directly into [Desmos Graphing Calculator](https://www.desmos.com/calculator/ekngv8vkax):
 
